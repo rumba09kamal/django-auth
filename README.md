@@ -2,6 +2,10 @@
 Django Authentication
 
 # Screenshots
+| Log In | Sign Up |
+| ------ | ------- |
+| <img src="./screenshots/login.png" width="350"> | <img src="./screenshots/signup.png" width="350"> |
+
 
 # Installation
 ---
