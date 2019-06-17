@@ -9,8 +9,8 @@ User = get_user_model()
 
 
 class UserLoginForm(forms.Form):
-    username = forms.CharField()
-    password = forms.CharField(widget=forms.PasswordInput)
+    username = forms.CharField(label='', widget=forms.TextInput(attrs={'placeholder': 'username'}))
+    password = forms.CharField(label='', widget=forms.PasswordInput(attrs={'placeholder': 'password'}))
 
     def clean(self, *args, **kwargs):
         username = self.cleaned_data.get('username')
@@ -30,9 +30,10 @@ class UserLoginForm(forms.Form):
 
 
 class UserRegisterForm(forms.ModelForm):
-    email = forms.EmailField(label="Email Account")
-    email2 = forms.EmailField(label="Confirm Email")
-    password = forms.CharField(widget=forms.PasswordInput)
+    username = forms.CharField(label="", widget=forms.TextInput(attrs={'class':'form-input', 'placeholder':'username'}))
+    email = forms.EmailField(label="", widget=forms.EmailInput(attrs={'class': 'form-input', 'placeholder': 'Email Account'}))
+    email2 = forms.EmailField(label="", widget=forms.EmailInput(attrs={'class': 'form-input', 'placeholder': 'Confirm Email Account'}))
+    password = forms.CharField(widget=forms.PasswordInput(attrs={'class': 'form-input', 'placeholder': 'password', 'id':'password'}))
 
     class Meta:
         model = User
