@@ -9,7 +9,7 @@ Django Authentication
 ```
 git clone https://github.com/rumba09kamal/django-auth
 ```
-## Create a virtualenv and Insall required dependencies as
+## Create a virtual enviroment and install required dependencies as
 ```
 virtualenv venv
 source venv/bin/activate
@@ -28,4 +28,3 @@ python manage.py runserver
 
 # Demo
 http://localhost:8000
-
